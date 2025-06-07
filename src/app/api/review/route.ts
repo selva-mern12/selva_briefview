@@ -17,7 +17,7 @@ interface IReview extends mongoose.Document {
 }
 
 // Connect to MongoDB
-export async function connectDB() {
+async function connectDB() {
   if (mongoose.connection.readyState >= 1) return
   try {
     await mongoose.connect(MONGODB_URI, {
