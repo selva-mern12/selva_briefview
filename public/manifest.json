@@ -1,0 +1,38 @@
+{ 
+  "id": "/",
+  "short_name": "Selva",
+  "name": "Selva's Portfolio - MERN Stack Developer",
+  "description": "A portfolio showcasing Selva's work as a MERN Stack Developer.",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "375x667", 
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ], 
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "orientation": "portrait"
+}

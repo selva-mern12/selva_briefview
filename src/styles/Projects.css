@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Cinzel+Decorative:wght@400;700&family=Cookie&family=Dancing+Script:wght@400;700&family=Fredericka+the+Great&family=Gloria+Hallelujah&family=Grand+Hotel&family=Indie+Flower&family=Inter:wght@400;700&family=Lobster&family=Lora:wght@400;700&family=Monoton&family=Montserrat:wght@400;700&family=Mountains+of+Christmas&family=Nunito:wght@400;700&family=Noto+Sans+Tamil:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Permanent+Marker&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Poppins:wght@400;700&family=Quicksand&family=Raleway:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Sacramento&family=Shadows+Into+Light&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Stint+Ultra+Expanded&family=Tilt+Prism&family=Work+Sans:ital,wght@0,400;0,700;1,700&family=Yesteryear&display=swap');
+
+.projects-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  scroll-margin-top: 0;
+  padding: 20px 0;
+  position: relative;
+}
+.projects-title {
+  font-size: 40px;
+  font-weight: normal;
+  font-family: Playfair Display SC;
+  color: #f0f4ff;
+  margin: 0;
+  text-shadow: -2px -2px 5px #ffffff4d, 2px 2px 5px #00000080;
+}
+.projects-intro {
+  font-size: 18px;
+  color: #cad6ff; 
+  text-align: center;
+  max-width: 600px;
+  text-shadow: -2px -2px 5px #ffffff4d, 2px 2px 5px #00000080;
+}
+.projects-horizontal {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  width: 90vw;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+.projects-horizontal::-webkit-scrollbar {
+  height: 12px; 
+}
+.projects-horizontal::-webkit-scrollbar-track {
+  background: #ffffff33;
+  border-radius: 10px;
+}
+.projects-horizontal::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #007bff, #00bfff);
+  border-radius: 10px;
+  border: 2px solid #ffffff33; 
+}
+.projects-horizontal::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #00bfff, #007bff); 
+}
+.project-card {
+  width: 225px;
+  height: 477px;
+  border-radius: 20px;
+  filter: brightness(1.8);
+  box-shadow: 0 8px 32px #0000001a;
+  transition: all 0.4s ease;
+  flex-shrink: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+}
+.project-card.hovered {
+  width: 850px;
+  filter: brightness(1.5);
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px #00000033, 0 0 20px #0000004d;
+}
+.project-preview {
+  background-color: #790e6470;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.project-name {
+  position: absolute;
+  font-family: Lora ;
+  top: 50%;
+  white-space: nowrap;
+  font-size: 28px;
+  color: #e2feff;
+  text-shadow: 2px 2px 4px #000000;
+  transition: all 0.3s ease;
+}
+.project-card.hovered .project-name {
+  top: 10px;
+  left: 30px;
+  max-width: 200px;
+  font-size: 35px;
+  text-shadow: 3px 3px 6px #000000;
+}
+.project-details {
+  display: none;
+  position: absolute;
+  font-family: Roboto;
+  color: #eafffd;
+  top: 0px;
+  left: 100%;
+  width: calc(100% - 225px);
+  height: 100%;
+  padding: 30px;
+  transition: all 0.5s ease;
+  text-shadow: 0 -10px 20px #000000;
+}
+.project-card.hovered .project-details {
+  display: inline;
+  left: 25%;
+}
+.project-description {
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+.project-tech {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.project-features {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.project-features li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+.project-deployment,
+.project-status,
+.project-login,
+.project-credentials {
+  font-size:15px;
+  margin-top: 10px;
+  z-index: 100;
+}
+.active-status {
+  color: #7ef782;
+  font-weight: bold;
+}
+.inactive-status {
+  color: #ff5733;
+  font-weight: bold;
+}
+.project-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.project-link {
+  background: #5100ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 
+    0 4px 6px rgba(0, 123, 255, 0.3),
+    0 2px 4px rgba(0, 123, 255, 0.2);
+  transition: all 0.3s ease;
+}
+.project-repo {
+  background: #fffb07;
+  color: #4c065d;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 
+    0 4px 6px rgba(255, 193, 7, 0.3),
+    0 2px 4px rgba(255, 193, 7, 0.2);
+  transition: all 0.3s ease;
+  text-shadow: none;
+}
+.project-link:hover,
+.project-repo:hover {
+  transform: translateY(-3px);
+  border: #ffffff50 1px groove;
+  box-shadow: 0 4px 8px #000000b7;
+}
+.project-link:hover {
+  background: #007bff;
+}
+.project-repo:hover {
+  background: #7bff00;
+}
+.project-link:active,
+.project-repo:active{
+  scale: 0.9;
+} 
+
+@media (max-width: 768px) {
+  .projects-container {
+    justify-content: center;
+    padding: 0;
+    padding-bottom: 50px;
+  }
+  .projects-title {
+    font-size: 30px;
+  }
+  .projects-intro {
+    font-size: 16px;
+  }
+  .project-card {
+    width: 200px;
+    height: 410px;
+    border-radius: 10px;
+  }
+  .project-card.hovered {
+    width: 320px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .project-card.hovered .project-name {
+    font-size: 30px;
+  }
+  .project-details {
+    position: static;
+    bottom: 0px;
+    left: 100%;
+    width: 100%;
+    height: 120%;
+    padding: 10px;
+    overflow-y: auto;
+  }
+  .project-card.hovered .project-details {
+    left: 0%;
+    bottom: 0;
+    opacity: 1;
+  }
+  .project-description {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .project-tech {
+    font-size: 13px;
+    margin: 0;
+  }
+  .project-features {
+    margin: 2px 0;
+    font-size: 13px;
+    line-height: 1;
+  }
+  .project-features li {
+    margin-bottom: 0px;
+  }
+  .project-deployment,
+  .project-status,
+  .project-login,
+  .project-credentials {
+    font-size:13px;
+    margin-top: 5px;
+    z-index: 100;
+  }
+  .project-links {
+    margin-top: 10px;
+  }
+  .project-link,
+  .project-repo {
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,194 @@
+.contact-section {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+.contact-container {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 10px;
+}
+.contact-title {
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.contact-text {
+    font-size: 17px;
+    color: #ffffffe6; 
+    margin-bottom: 20px;
+}
+.contact-content {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+.contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background: #ffffff1a;
+    box-shadow:
+        0 0 0 1px #ffffff0d,
+        0 10px 20px #00000099,
+        0 20px 40px #00000066,
+        inset 0 1px 2px #ffffff1a;
+    backdrop-filter: blur(10px);
+}
+.contact-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+.icon-wrapper {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2); 
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+}
+.contact-item:hover .icon-wrapper {
+    background: rgba(255, 255, 255, 0.3);
+}
+.contact-link {
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.contact-link:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact-form h3 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    margin: 10px 0;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.form-group {
+    width: 100%;
+    box-shadow:
+        0 0 0 1px #ffffff0d,
+        0 10px 20px #00000099,
+        0 20px 40px #00000066,
+        inset 0 1px 2px #ffffff1a;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: border-color 0.3s ease;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ffffff99; 
+}
+.contact-btn {
+    padding: 12px 24px;
+    background: #001aff; 
+    color: #ffffff;
+    border: 1px solid #ffffff4d;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.contact-btn:hover {
+    background: #001aff84; 
+    border-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow:
+        0 0 0 1px #ffffff0d,
+        0 10px 20px #00000099,
+        0 20px 40px #00000066,
+        inset 0 1px 2px #ffffff1a;
+}
+.contact-btn:active{
+    transform: scale(0.98);
+}
+.whatsapp-link {
+    margin-left: 10px; 
+    padding: 7px;
+    display: inline-flex;
+    align-items: center;
+    color: #f6fff9; 
+    transition: color 0.3s ease;
+}
+.whatsapp-icon {
+    font-size: 25px;
+}
+.whatsapp-link:hover {
+    color: #128c7e;
+}
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 10vh 0;
+    }
+    .contact-container{
+        height: 80vh;
+        width: 95vw;
+        overflow-y: auto;
+    }
+    .contact-title {
+        font-size: 25px;
+    }
+    .contact-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    .contact-info {
+        gap: 15px;
+    }
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 5px 10px;
+    }
+    .contact-item:hover .icon-wrapper {
+        background: rgba(255, 255, 255, 0.3);
+    }
+    .contact-form {
+        gap: 15px;
+    }
+    .contact-form h3 {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  width: 100%;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: #0f426c70;
+  backdrop-filter: blur(5px);
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 0 5px #cbcab4f9;
+}
+.header-container .header-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.header-container .header-title:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 10px #00ff88;
+}
+.hamburger-menu {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+.hamburger-menu .menu-item {
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hamburger-menu .menu-item .menu-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+.menu-item .nav-icon {
+  font-size: 20px;
+  display: none;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  position: absolute;
+  top: -20px;
+  color: #ffdd57;
+}
+.menu-item:hover .nav-icon {
+  display: block;
+  transform: translateY(0);
+}
+.hamburger-menu .menu-item .menu-text {
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+.hamburger-menu .menu-item:hover .menu-text {
+  color: #ffdd57;
+  text-shadow: 0 0 10px #ffdd57b3;
+}
+.hamburger-menu .menu-item::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffdd57;
+  transition: width 0.3s ease;
+}
+.hamburger-menu .menu-item:hover::after {
+  width: 100%;
+}
+.menu-item.active-tab .menu-text {
+  color: #fff700; 
+  text-shadow: 0 0 10px #d8ecffb3;
+}
+.menu-item.active-tab .nav-icon {
+  display: block;
+  visibility: visible;
+  transform: translateY(0);
+  color: #fff700; 
+}
+.menu-item.active-tab::after {
+  width: 100%;
+  background-color: #ffdd57; 
+}
+
+section {
+  padding-top: 80px;
+  scroll-margin-top: 10vh;
+  height: 90vh;
+  padding: 20px;
+}
+
+.footer-container{
+  height: 10vh;
+  width: 100vw;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #2b060670;
+  backdrop-filter: blur(5px);
+  color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  box-shadow: 0 0 10px #cbcab4f9;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0 5px;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    justify-content: center;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  .header-container .header-title{
+    font-size: 20px;
+  }
+  .hamburger-menu {
+    width: 100vw;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+  }
+  .hamburger-menu .menu-item{
+    width: 18vw;
+  }
+  .menu-item .menu-link .nav-icon {
+    top: 0;
+  }
+  .hamburger-menu .menu-item .menu-text{
+    font-size: 14px;
+    font-weight: normal;
+    display: none;
+  }
+  .menu-item .nav-icon{
+    display: block;
+    color: #ffffff;
+    visibility: visible;
+  }
+  .menu-item.active-tab .menu-text {
+    display: block;
+    color: #fff700;
+    text-shadow: 0 0 10px rgba(216, 236, 255, 0.7);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  .menu-item.active-tab .nav-icon {
+    opacity: 1;
+    transform: translateY(-20px);
+    color: #fff700;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 4px rgba(255, 247, 0, 0.7));
+  }
+  
+  .menu-item.active-tab::after {
+    width: 100%;
+    background-color: #ffdd57;
+    transition: width 0.3s ease, background-color 0.3s ease; 
+  }
+  .menu-item:not(.active-tab):hover .menu-text {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(216, 236, 255, 0.5);
+  }
+  .menu-item:not(.active-tab):hover .nav-icon {
+    opacity: 0;
+  }
+  .menu-item:not(.active-tab):after {
+    opacity: 0;
+  }
+  .hamburger-menu{
+    gap: 10px;
+  }
+  .footer-container{
+    display: flex;
+  }
+}
