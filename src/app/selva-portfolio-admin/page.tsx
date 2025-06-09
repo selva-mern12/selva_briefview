@@ -27,7 +27,8 @@ const PortfolioAdmin  = () => {
                 body: JSON.stringify({ admin_pass: password }),
             });
             const data = await response.json();
-            setError("")
+            setError("Admin Login successfully")
+            setTimeout(() => {setError("")} , 3000)
             setIsAuthenticated(data.admin);
             if (!data.admin) setError("Invalid password");
         }
@@ -134,6 +135,7 @@ const PortfolioAdmin  = () => {
                             onKeyDown={e => handleAdminPass(e)}
                         />
                         <input type='checkbox' onChange={() => setShowPassword(prev => !prev)} />
+                        {error && <p>{error}</p>}
                     </div>
             }
 
