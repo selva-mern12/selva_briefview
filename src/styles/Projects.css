@@ -213,13 +213,13 @@
     font-size: 16px;
   }
   .project-card {
-    width: 200px;
-    height: 410px;
+    width: 230px;
+    height: 450px;
     border-radius: 10px;
   }
   .project-card.hovered {
     width: 320px;
-    height: auto;
+    height: 470px;
     display: flex;
     flex-direction: column;
     background-size: contain;
@@ -238,6 +238,7 @@
     overflow-y: auto;
   }
   .project-card.hovered .project-details {
+    height: 155%;
     left: 0%;
     bottom: 0;
     opacity: 1;
