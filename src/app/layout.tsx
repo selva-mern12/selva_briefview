@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -150,6 +151,22 @@ export default function RootLayout({
         />
       </head>
       <body>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-1KBZDHEM2Q"
+          strategy="afterInteractive"
+        />
+        <Script id="ga-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1KBZDHEM2Q', {
+              anonymize_ip: true,
+              cookie_flags: 'SameSite=None;Secure',
+            });
+          `}
+        </Script>
         <noscript>You need to enable JavaScript to run this app.</noscript>
         {children}
       </body>

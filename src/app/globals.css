@@ -294,3 +294,40 @@ hr::after {
     background-color: #00000080;
   }
 }
+
+
+
+.cookie-consent {
+  background: #2c3e50;
+  color: #fff;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+}
+.cookie-consent button {
+  background: #3498db;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.cookie-consent button:hover {
+  background: #2980b9;
+}
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #f8f9fa;
+}
+.footer-link {
+  color: #3498db;
+  text-decoration: none;
+}
+.footer-link:hover {
+  text-decoration: underline;
+}
