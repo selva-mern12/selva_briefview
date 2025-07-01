@@ -125,7 +125,7 @@ hr::after {
 }
 .certificate-lable{
   display: block;
-  position: absolute;
+  position: fixed;
   bottom: 70px;
   right: 80px;
   font-size: 15px;
